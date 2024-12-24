@@ -1,4 +1,4 @@
-# Kubernetes Namespaces
+# `Kubernetes Namespaces`
 
 ## Explanation
 
@@ -42,7 +42,7 @@ Then , run command
 This command will create a namespace called `my-namespace` in your Kubernetes cluster.
 
 
-## Useful `kubectl-namespace` Commands
+## Useful kubectl-namespace Commands
 - **List all namespaces:**
   ```bash
   kubectl get namespaces

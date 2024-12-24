@@ -18,3 +18,4 @@ nodes:
 
 
   # kind create cluster --name=88-cluster --config=config.yml
+  # kubectl get nodes
