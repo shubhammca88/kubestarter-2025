@@ -42,3 +42,8 @@ After deployment, verify the pod's status using:
 ```bash
 kubectl get pods
 ```
+## Verification
+more information pods 
+```bash
+kubectl get pods -o wide
+```
