@@ -26,3 +26,8 @@ echo "kind & kubectl installation complete."
 # -----------------------------Linux--------------------------------------
 # chmod 777 installing_kindcluster.sh   (for permision)
 # ./installing_kindcluster.sh     (for install )
+
+# ----------------------verify---------------------------------------------
+# kind version
+# kubectl version
+# docker --version
