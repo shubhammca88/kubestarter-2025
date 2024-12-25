@@ -1,8 +1,9 @@
-# `Kubernetes terms & Architecture`
+# `Kubernetes Architecture`
 
 ## Table of Contents
-- [Kubernetes Architecture](#kubernetes-architecture)
+- [`Kubernetes Architecture`](#kubernetes-architecture)
   - [Table of Contents](#table-of-contents)
+  - [Kubernetes (K8s)](#kubernetes-k8s)
   - [Control Plane (Master Node Components)](#control-plane-master-node-components)
     - [API Server](#api-server)
     - [etcd](#etcd)
