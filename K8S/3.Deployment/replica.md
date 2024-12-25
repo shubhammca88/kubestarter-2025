@@ -16,7 +16,7 @@ create repicas & scaled
 kubectl scale deployment/nginx-deploy -n nginx --replicas=1
 ```
 ## `Rolling update`
-In Kubernetes, a rolling update is a deployment strategy that allows you to update your application (deployed as Pods) with zero downtime. It does this by incrementally replacing old Pods with new ones. This ensures that your application remains available to users even during the update process.
+In Kubernetes, a rolling update is a deployment strategy that allows you to update your application (deployed as Pods) with zero downtime. It does this by incrementally replacing old Pods with new ones.
 
 ## Uefull command 
 ```bash

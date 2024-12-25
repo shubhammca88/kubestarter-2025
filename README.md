@@ -1,31 +1,38 @@
-# Kubernetes Architecture Explained
-
-This document explains the key components and features of a Kubernetes cluster in simple terms.
+# `Kubernetes terms & Architecture`
 
 ## Table of Contents
-- [Control Plane (Master Node Components)](#control-plane-master-node-components)
-  - [API Server](#api-server)
-  - [etcd](#etcd)
-  - [Scheduler](#scheduler)
-  - [Controller Manager](#controller-manager)
-  - [Cloud Controller Manager](#cloud-controller-manager)
-- [Worker Node Components](#worker-node-components)
-  - [kubelet](#kubelet)
-  - [kube-proxy](#kube-proxy)
-  - [Container Runtime](#container-runtime)
-- [Other Components](#other-components)
-  - [Pod](#pod)
-  - [Service](#service)
-  - [Volume](#volume)
-  - [Namespace](#namespace)
-  - [Ingress](#ingress)
-- [Key Features of Kubernetes](#key-features-of-kubernetes)
-  - [Self-Healing](#self-healing)
-  - [Load Balancing](#load-balancing)
-  - [Scalability](#scalability)
-  - [Automated Rollouts and Rollbacks](#automated-rollouts-and-rollbacks)
-  - [Resource Optimization](#resource-optimization)
-  - [Multi-Cloud Support](#multi-cloud-support)
+- [Kubernetes Architecture](#kubernetes-architecture)
+  - [Table of Contents](#table-of-contents)
+  - [Control Plane (Master Node Components)](#control-plane-master-node-components)
+    - [API Server](#api-server)
+    - [etcd](#etcd)
+    - [Scheduler](#scheduler)
+    - [Controller Manager](#controller-manager)
+    - [Cloud Controller Manager](#cloud-controller-manager)
+  - [Worker Node Components](#worker-node-components)
+    - [kubelet](#kubelet)
+    - [kube-proxy](#kube-proxy)
+    - [Container Runtime](#container-runtime)
+  - [Other Components](#other-components)
+    - [Pod](#pod)
+    - [Service](#service)
+    - [Volume](#volume)
+    - [Namespace](#namespace)
+    - [Ingress](#ingress)
+  - [Key Features of Kubernetes](#key-features-of-kubernetes)
+    - [Self-Healing](#self-healing)
+    - [Load Balancing](#load-balancing)
+    - [Scalability](#scalability)
+    - [Automated Rollouts and Rollbacks](#automated-rollouts-and-rollbacks)
+    - [Resource Optimization](#resource-optimization)
+    - [Multi-Cloud Support](#multi-cloud-support)
+
+## Kubernetes (K8s)
+Kubernetes (K8s) is an open-source platform that automates the deployment, scaling, and management of containerized applications.
+
+`Kubernetes Architecture`
+
+<kbd>![image](img/k8s-architecture.png)</kbd>
 
 ## Control Plane (Master Node Components)
 
