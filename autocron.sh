@@ -15,4 +15,4 @@ git push origin main
 # Print a message
 echo "Auto commit and push completed."
 # Schedule the script to run every day at 2am
-(crontab -l ; echo "*/5 * * * * /home/shubham/Documents/kubestarter-2025/autocron.sh") | crontab -
+# (crontab -l ; echo "*/5 * * * * /home/shubham/Documents/kubestarter-2025/autocron.sh") | crontab -
