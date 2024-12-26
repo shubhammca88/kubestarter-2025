@@ -1,8 +1,10 @@
-# Persistent Volumes in Kubernetes
+# `Persistent Volumes` in Kubernetes
 
 ## Overview
 
 A Persistent Volume (PV) in Kubernetes is a piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using Storage Classes. PVs are resources in the cluster just like nodes are cluster resources. They are independent of the lifecycle of any individual pod that uses the PV.
+
+<kbd>![imgae](/img/pv-pvc-k8s.png)</kbd>
 
 ## Key Terms
 
