@@ -36,7 +36,7 @@ A Persistent Volume (PV) in Kubernetes is a piece of storage in the cluster that
 
 ## Example YAML File
 
-Here is an example of a Persistent Volume YAML file:
+Persistent Volume YAML file:
 
 ```yaml
 apiVersion: v1
