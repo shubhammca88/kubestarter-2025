@@ -68,4 +68,4 @@ spec:
 
 ## Conclusion
 
-Persistent Volumes and Persistent Volume Claims are essential components in Kubernetes for managing storage resources. They provide a way to decouple storage from the lifecycle of pods, ensuring data persistence and stability.
+Persistent Volumes and Persistent Volume Claims are essential components in Kubernetes for `managing storage resources`. They provide a way to decouple storage from the lifecycle of pods, ensuring data persistence and stability.
