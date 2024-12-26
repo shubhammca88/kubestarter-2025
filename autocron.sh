@@ -1,9 +1,12 @@
-#!/bin/bash
+# Remove the lock file if it exists
+if [ -f /home/shubham/Documents/kubestarter-2025/.git/index.lock ]; then
+    rm /home/shubham/Documents/kubestarter-2025/.git/index.lock
+fi
 
-# Navigate to the repository
-cd /home/shubham/Documents/kubestarter-2025
+# Pull the latest changes from the remote repository
+git pull origin main
 
-# Add all changes to git
+# Add all changes to the staging area
 git add .
 
 # Commit the changes with a message
@@ -15,5 +18,5 @@ git push origin main
 # Print a message
 echo "Auto commit and push completed."
 
-# Schedule the script to run every day at 2am
-# (crontab -l ; echo "*/5 * * * * /home/shubham/Documents/kubestarter-2025/autocron.sh") | crontab -
+# Schedule the script to run every 10 minutes
+(crontab -l ; echo "*/1 * * * * /home/shubham/Documents/kubestarter-2025/autocron.sh") | crontab -

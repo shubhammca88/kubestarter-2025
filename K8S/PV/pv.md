@@ -1,4 +1,4 @@
-# `Persistent Volumes in Kubernetes`
+# Persistent Volumes in Kubernetes
 
 ## Overview
 
