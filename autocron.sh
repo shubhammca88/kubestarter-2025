@@ -1,7 +1,7 @@
-# Remove the lock file if it exists
-if [ -f /home/shubham/Documents/kubestarter-2025/.git/index.lock ]; then
-    rm /home/shubham/Documents/kubestarter-2025/.git/index.lock
-fi
+# # Remove the lock file if it exists
+# if [ -f /home/shubham/Documents/kubestarter-2025/.git/index.lock ]; then
+#     rm /home/shubham/Documents/kubestarter-2025/.git/index.lock
+# fi
 
 # Pull the latest changes from the remote repository
 git pull origin main
