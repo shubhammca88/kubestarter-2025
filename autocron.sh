@@ -12,7 +12,7 @@ git commit -m "update"
 # Push the changes to the remote repository
 git push origin main
 
-# Print a message indicating the script has run
+# Print a message
 echo "Auto commit and push completed."
 # Schedule the script to run every day at 2am
 (crontab -l ; echo "* * * * * /home/shubham/Documents/kubestarter-2025/autocron.sh") | crontab -
