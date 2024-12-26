@@ -1,6 +1,6 @@
-# Kubernetes Cron Jobs
+# `Kubernetes Cron Jobs`
 
-Kubernetes Cron Jobs are used to run tasks on a schedule. They are useful for creating periodic and recurring tasks, like running backups or sending emails.
+Kubernetes Cron Jobs are used to `run tasks on a schedule`. They are useful for creating periodic and recurring tasks, like running backups or sending emails.
 
 ## Key Terms
 
