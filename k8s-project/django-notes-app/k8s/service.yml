@@ -1,14 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: notes-app-service
+  namespace: django-app
   labels:
-    app: nginx
+    app: notes-app
 spec:
   selector:
-    app: nginx
+    app: notes-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8000
+      targetPort: 8000
   type: ClusterIP

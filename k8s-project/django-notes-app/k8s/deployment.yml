@@ -1,20 +1,20 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: nginx-deploy
-  namespace: nginx
+  name: notes-app-deployment
+  namespace: django-app
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: notes-app
   template:
     metadata:
       labels:
-        app: nginx
+        app: notes-app
     spec:
       containers:
-        - name: nginx
-          image: nginx:latest
+        - name: notes-app
+          image: shubhammca88/notes-app-k8s
           ports:
-            - containerPort: 80
+            - containerPort: 8000

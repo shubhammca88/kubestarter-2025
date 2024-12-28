@@ -1,11 +1,11 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: nginx-pod
-  namespace: nginx
+  name: notes-app
+  namespace: django-app
 spec:
   containers:
-    - name: nginx
-      image: nginx:latest
+    - name: notes-app
+      image: shubhammca88/django-notes-app:01
       ports:
-        - containerPort: 80
+        - containerPort: 8000
