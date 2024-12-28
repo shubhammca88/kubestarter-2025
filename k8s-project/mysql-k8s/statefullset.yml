@@ -24,7 +24,11 @@ spec:
           name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "rootpassword"
+          value: "root"
+
+        - name: MYSQL_DATABASE
+          value: devops
+          
         volumeMounts:
         - name: mysql-data
           mountPath: /var/lib/mysql
