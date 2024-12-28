@@ -35,32 +35,10 @@ kubectl expose deployment <deployment-name> --type=<service-type> --name=<servic
 
 Replace `<deployment-name>`, `<service-type>`, and `<service-name>` with your specific values.
 
-## Example
-
-Here is an example of creating a ClusterIP Service for a deployment named `my-deployment`:
+or 
 
 ```bash
-kubectl expose deployment my-deployment --type=ClusterIP --name=my-service
-```
-
-This will create a Service named `my-service` that targets the Pods of `my-deployment`.
-
-## YAML Definition
-
-You can also define a Service using a YAML file. Below is an example of a ClusterIP Service definition:
-
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-    name: my-service
-spec:
-    selector:
-        app: my-app
-    ports:
-        - protocol: TCP
-            port: 80
-            targetPort: 80
+kubectl port-forward svc/nginx-service 8080:80 -n nginx
 ```
 
 # Usefull service command
