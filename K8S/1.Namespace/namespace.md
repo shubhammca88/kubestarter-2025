@@ -1,6 +1,6 @@
 # Kubernetes Namespaces
 
-Namespaces are a way to divide your Kubernetes cluster into virtual partitions, allowing you to organize and isolate resources.
+Namespaces are a way to divide your Kubernetes cluster into virtual and physical partitions, allowing you to organize and isolate resources.
 
 ## Why Use Namespaces?
 
