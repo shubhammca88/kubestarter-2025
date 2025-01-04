@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: example-config
+  namespace: default
+data:
+  # Configuration values
+  MYSQL_DATABASE: devops
+  # key2: value2
+  # # You can also include entire files
+  # config.json: |
+  #   {
+  #     "key": "value"
+  #   }
