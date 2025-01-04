@@ -6,6 +6,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
   rules:
   - http:
       paths:
@@ -17,7 +18,7 @@ spec:
             port: 
               number: 80
       - pathType: Prefix
-        path: /notes
+        path: /
         backend:
           service:
             name: notes-service
