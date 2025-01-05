@@ -17,3 +17,14 @@ spec:
       target:
         type: Utilization
         averageUtilization: 5
+
+#  kubectl apply -f hpa.yml
+# kubectl get hpa -n apache
+# kubectl get hpa apache-hpa -n apache -o yaml
+# kubectl describe hpa apache-hpa -n apache
+
+
+# load on the apache service by running a busybox container
+# kubectl run -i --tty load-generator --image=busybox -n apache /bin/sh
+# this will generate some load on the apache service
+# / # while true; do wget -q -O- http://apache-service.apache.svc.cluster.local; done
