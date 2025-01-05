@@ -13,3 +13,6 @@ spec:
       port: 80   # exposed port in the cluster
       targetPort: 80  # container port 
   type: ClusterIP
+
+# this is the service that will be exposed to the outside world
+  # sudo -E kubectl port-forward svc/apache-service -n apache 82:80 --address=0.0.0.0
