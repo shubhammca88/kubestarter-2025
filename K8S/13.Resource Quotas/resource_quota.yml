@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: my-resource-quota 
+spec:
+  hard:
+    requests.cpu: "1" 
+    requests.memory: 1Gi
+    limits.cpu: "2"
+    limits.memory: 2Gi
+    pods: "10" 
+    persistentvolumeclaims: "4" 
+    configmaps: "10"
+    services: "5"
+    replicationcontrollers: "10"
+
+# apiVersion: Always v1 for ResourceQuota objects.
+# kind: Specifies that this is a ResourceQuota object.
+# metadata.name: A descriptive name for your resource quota.
+# spec.hard: Defines the resource limits.
+# requests.cpu: Maximum total CPU requests for Pods in the namespace.
+# requests.memory: Maximum total memory requests for Pods.
+# limits.cpu: Maximum total CPU limits for Pods.
+# limits.memory: Maximum total memory limits for Pods.
+# pods: Maximum number of Pods allowed in the namespace.
+# persistentvolumeclaims: Maximum number of PersistentVolumeClaims.
+# configmaps: Maximum number of ConfigMaps.
+# services: Maximum number of Services.
+# replicationcontrollers: Maximum number of ReplicationControllers (often used with older deployments).
