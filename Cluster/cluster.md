@@ -28,9 +28,12 @@ A Kubernetes cluster is a set of machines, called nodes, that run containerized 
 
 | Command | Description |
 |---|---|
+| `kubectl cluster-info` | Display information about the cluster. |
+| `kubectl config get-contexts` | List of the current cluster. |
+| `kubectl config use-context <cluster-name>` | Switch the cluster. |
+| `kubectl config view` | Display configuration information about the cluster. |
 | `kubectl get nodes` | List all nodes in the cluster. |
 | `kubectl describe node <node-name>` | Get detailed information about a node. |
-| `kubectl cluster-info` | Display information about the cluster. |
 | `kubectl top nodes` | View resource usage of nodes. |
 | `kubectl cordon <node-name>` | Mark a node as unschedulable to prevent new Pods from being assigned to it. |
 | `kubectl uncordon <node-name>` | Mark a node as schedulable again. |
@@ -41,6 +44,7 @@ A Kubernetes cluster is a set of machines, called nodes, that run containerized 
 
 You can create a Kubernetes cluster in various ways:
 
+* **Kind:** A tool for running node Kubernetes cluster on your local machine.
 * **Minikube:** A tool for running a single-node Kubernetes cluster on your local machine.
 * **Kubeadm:** A tool for creating a Kubernetes cluster on your own infrastructure.
 * **Cloud Providers:**  Use managed Kubernetes services from cloud providers like Google Kubernetes Engine (GKE), Amazon Elastic Kubernetes Service (EKS), and Azure Kubernetes Service (AKS).
