@@ -12,7 +12,8 @@ The Kubernetes Dashboard is a web-based user interface for managing your Kuberne
 
 ## Accessing the Kubernetes Dashboard
 
-1. **Deploy the Dashboard:** If it's not already deployed, you can install the Kubernetes Dashboard using `kubectl apply`:
+1. **Deploy the Dashboard:** If it's not already deployed, you can install the Kubernetes Dashboard using `kubectl apply - dashbord `:
 
    ```bash
-   kubectl apply -f [https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml](https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml)
+   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+   ```
