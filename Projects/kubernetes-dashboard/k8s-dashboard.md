@@ -22,7 +22,7 @@ The Kubernetes Dashboard is a web-based user interface for managing your Kuberne
    ```bash
    kubectl proxy
    ```
-Then, open your web browser and navigate to 
+Then, open your `web browser` and navigate to 
 
 ``` link 
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/. 
