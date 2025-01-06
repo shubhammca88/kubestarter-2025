@@ -17,3 +17,8 @@ The Kubernetes Dashboard is a web-based user interface for managing your Kuberne
    ```bash
    kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
    ```
+2. **Access the Dashboard:** Use `kubectl proxy` to create a secure connection to the Dashboard: 
+
+   ```bash
+   kubectl proxy
+   ```
