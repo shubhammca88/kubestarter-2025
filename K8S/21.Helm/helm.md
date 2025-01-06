@@ -41,8 +41,9 @@ Helm uses the `helm` command-line tool.
 | Command | Description |
 |---|---|
 | `helm create <chart-name>` | Create a new chart directory. |
-| `helm lint <chart-name>` | Check a chart for potential issues. |
 | `helm package <chart-name>` | Package a chart into a `.tgz` file. |
+| `helm install <chart-name> <pckg-name> -n <ns-name> --create-namespace` | Check a chart for potential issues. |
+| `helm lint <chart-name>` | Check a chart for potential issues. |
 | `helm push <chart-package> <repo-name>` | Push a packaged chart to a repository. |
 
 ## Helm Charts
