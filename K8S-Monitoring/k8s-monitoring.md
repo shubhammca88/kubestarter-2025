@@ -102,4 +102,18 @@ To set up monitoring for your Kubernetes cluster, you can install Prometheus and
     ```sh 
     kubectl get secret prometheus-stack-grafana -n monitoring -o jsonpath="{.data.admin-password}" | base64 --decode
     ```
+
+    terminated all port-forward 
+
+    ```sh
+    pkill -f 'kubectl port-forward'
+    ```
+    Arternatively , you can 
+    ```sh 
+    sudo lsof -i :3000
+    or
+    ps aux | grep 'kubectl port-forward'
+
+    kill -9 <PID>
+    ```
 By following these steps, you will have Prometheus and Grafana installed in your Kubernetes cluster, enabling you to monitor and visualize your metrics effectively.
