@@ -57,16 +57,19 @@ To set up monitoring for your Kubernetes cluster, you can install Prometheus and
 2. **Install Prometheus and grafana using Helm:**
     ```sh
     helm install prometheus prometheus-community/prometheus
+    ```
+    This command installs the Prometheus stack using Helm from the prometheus-community repository. It sets up the Prometheus and Grafana services in the 'monitoring' namespace with specific configurations:
 
-    or 
-
-    // This command installs the Prometheus stack using Helm from the prometheus-community repository.
-    // It sets up the Prometheus and Grafana services in the 'monitoring' namespace with specific configurations:
-    // - Prometheus service is exposed on NodePort 30000
-    // - Grafana service is exposed on NodePort 31000
-    // - Both Prometheus and Grafana services are of type NodePort
-
-    helm install prometheus-stack prometheus-community/kube-prometheus-stack --namespace monitoring --set prometheus.service.nodePort=30000 --set frafana.service.nodePort=31000 --set grafana.service.type=NodePort --set prometheus.service.type=NodePort 
+    Prometheus service is exposed on NodePort 30000
+    Grafana service is exposed on NodePort 31000
+    Both Prometheus and Grafana services are of type NodePort
+    
+    ```sh
+    helm install prometheus-stack prometheus-community/kube-prometheus-stack --namespace monitoring 
+    --set prometheus.service.nodePort=30000 
+    --set frafana.service.nodePort=31000 
+    --set grafana.service.type=NodePort 
+    --set prometheus.service.type=NodePort 
     ```
 
 3. **Verify the installation pods , svc:**
