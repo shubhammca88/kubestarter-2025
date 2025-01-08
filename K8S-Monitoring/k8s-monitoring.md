@@ -73,7 +73,7 @@ To set up monitoring for your Kubernetes cluster, you can install Prometheus and
     ```sh
     kubectl get pods -n monitoring
     
-    kubectl get pods -n monitoring
+    kubectl get svc -n monitoring
     ```
 4. **Access Promtheus:**
     ```sh
@@ -92,14 +92,13 @@ To set up monitoring for your Kubernetes cluster, you can install Prometheus and
     ```
 
     Open your browser and navigate to `http://localhost:3000`. The default login is `admin` for user name.
-    
-    And get password 
+
+    And get password , this password show base64 encoded 
     ```sh
     kubectl get secret prometheus-stack-grafana -n monitoring -o jsonpath="{.data.admin-password}"
     ```
-
-    this password show based 64 encoded now , 
-    
+    base64 decode , 
+  
     ```sh 
     kubectl get secret prometheus-stack-grafana -n monitoring -o jsonpath="{.data.admin-password}" | base64 --decode
     ```
