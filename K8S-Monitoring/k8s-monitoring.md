@@ -11,8 +11,8 @@ Monitoring your Kubernetes cluster and applications is crucial for ensuring thei
 ## Monitoring Tools
 
 * **Metrics Server:**  A built-in component that collects resource usage data for pods and nodes.
-* **Prometheus:** A popular open-source monitoring system that collects metrics from various sources and provides alerting capabilities.
-* **Grafana:**  A visualization and dashboarding tool that can be used to display metrics from Prometheus and other sources.
+* **Prometheus:** A popular open-source monitoring system that collects metrics from various sources and provides alerting capabilities  (or time series database , scrap data, data source, query server ).
+* **Grafana:**  A `visualization and dashboarding tool` that can be used to display metrics from Prometheus and other sources.
 * **cAdvisor:**  A container monitoring tool that collects resource usage and performance characteristics of containers.
 
 ## Monitoring Concepts
@@ -41,3 +41,66 @@ Monitoring your Kubernetes cluster and applications is crucial for ensuring thei
 * **Implement Centralized Logging:** Aggregate logs from your applications and cluster for easier analysis.
 
 By understanding these Kubernetes monitoring terms and concepts, you can effectively monitor your applications and cluster, ensuring their health, performance, and stability.
+## Installing Prometheus and Grafana
+
+To set up monitoring for your Kubernetes cluster, you can install Prometheus and Grafana. Follow these steps:
+
+### Installing Prometheus
+
+1. **Add the Prometheus Helm repository:**
+    ```sh
+    helm repo add prometheus-community https://
+    prometheus-community.github.io/helm-charts
+    helm repo update
+    ```
+
+2. **Install Prometheus and grafana using Helm:**
+    ```sh
+    helm install prometheus prometheus-community/prometheus
+
+    or 
+
+    // This command installs the Prometheus stack using Helm from the prometheus-community repository.
+    // It sets up the Prometheus and Grafana services in the 'monitoring' namespace with specific configurations:
+    // - Prometheus service is exposed on NodePort 30000
+    // - Grafana service is exposed on NodePort 31000
+    // - Both Prometheus and Grafana services are of type NodePort
+
+    helm install prometheus-stack prometheus-community/kube-prometheus-stack --namespace monitoring --set prometheus.service.nodePort=30000 --set frafana.service.nodePort=31000 --set grafana.service.type=NodePort --set prometheus.service.type=NodePort 
+    ```
+
+3. **Verify the installation pods , svc:**
+    ```sh
+    kubectl get pods -n monitoring
+    
+    kubectl get pods -n monitoring
+    ```
+4. **Access Promtheus:**
+    ```sh
+    kubectl port-forward svc/prometheus-stack-kube-prom-prometheus 9090:9090 -n monitoring
+
+    or 
+    // The `&` at the end of the command runs the port-forwarding process in the background.
+
+    kubectl port-forward svc/prometheus-stack-kube-prom-prometheus 9090:9090 -n monitoring &
+
+    ```
+
+4. **Access Grafana:**
+    ```sh
+    kubectl port-forward svc/prometheus-stack-grafana 3000:80 -n monitoring &
+    ```
+
+    Open your browser and navigate to `http://localhost:3000`. The default login is `admin` for user name.
+    
+    And get password 
+    ```sh
+    kubectl get secret prometheus-stack-grafana -n monitoring -o jsonpath="{.data.admin-password}"
+    ```
+
+    this password show based 64 encoded now , 
+    
+    ```sh 
+    kubectl get secret prometheus-stack-grafana -n monitoring -o jsonpath="{.data.admin-password}" | base64 --decode
+    ```
+By following these steps, you will have Prometheus and Grafana installed in your Kubernetes cluster, enabling you to monitor and visualize your metrics effectively.
