@@ -25,7 +25,7 @@ kind uses the `kind` command-line tool.
 | Command | Description |
 |---|---|
 | `kind cluster-info` | verify the cluster is running |
-| `kind create cluster` | Create a new kind cluster. |
+| `kind create cluster` | default create a new kind cluster. |
 | `kind create cluster --name=<cluster-name> --config=kind-config.yaml` | Create a cluster with a specific configuration file. |
 | `kind get clusters` | List all kind clusters. |
 | `kind delete cluster` | Delete the default kind cluster. |
