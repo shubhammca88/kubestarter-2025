@@ -18,4 +18,8 @@ nodes:
 
 
   # kind create cluster --name=88-cluster --config=config.yml
+  # kind delete cluster --name=88-cluster
   # kubectl get nodes
+
+  # To uninstall kind cluster, you can use the following command:
+  # kind delete cluster --name=88-cluster

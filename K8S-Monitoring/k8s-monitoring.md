@@ -1,6 +1,8 @@
 # Kubernetes Monitoring and Grafrana 
 
-Monitoring your Kubernetes cluster and applications is crucial for ensuring their health, performance, and stability. 
+Kubernetes monitoring involves collecting, processing, and analyzing metrics and logs from various components within your cluster.
+
+Prometheus is open-source monitoring system, ideal for Kubernetes. It scrapes metrics from various sources, stores them in a time-series database, and provides a query language (PromQL) for analysis.
 
 Grafana is an open-source platform for visualizing and analyzing metrics. It connects to various data sources (like Prometheus) and allows you to create:
 
