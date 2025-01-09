@@ -14,7 +14,7 @@ sudo apt install -y curl wget apt-transport-https
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 
 # Executable and move it into your path
-chmod +x minikube
+chmod 755 minikube
 sudo mv minikube /usr/local/bin/
 
 # Start Minikube
@@ -22,3 +22,7 @@ minikube start --driver=docker --vm=true
 
 # Minikube status
 minikube status
+
+# To uninstall Minikube
+# minikube delete
+# sudo rm /usr/local/bin/minikube
