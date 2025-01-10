@@ -2,8 +2,9 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: my-cluster
-  region: us-west-2
+  name: eks-88-cluster-88-cluster
+  region: eu-north-1
+  # namespace: eks-88-cluster
 
 nodeGroups:
   - name: ng-1
@@ -14,4 +15,4 @@ nodeGroups:
     volumeSize: 20
     ssh:
       allow: true
-      publicKeyName: my-key
+      publicKeyName: eks-key
