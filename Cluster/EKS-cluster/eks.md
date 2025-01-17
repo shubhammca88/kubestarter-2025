@@ -44,6 +44,9 @@ You can manage EKS clusters using the AWS Management Console, the AWS CLI, or th
 | `aws eks update-cluster-config --name <cluster-name>` | Update the configuration of an EKS cluster. |
 | `aws eks delete-cluster --name <cluster-name>` | Delete an EKS cluster. |
 
+### AWS EKS COMMAND FOR YML FILE
+
+
 ## EKS Cluster install 
 
   ```bash
