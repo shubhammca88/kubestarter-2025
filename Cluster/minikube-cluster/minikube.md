@@ -24,6 +24,7 @@ Minikube uses the `minikube` command-line tool.
 
 | Command | Description |
 |---|---|
+| `minikube version` | Verify Minikube cluster. |
 | `minikube start` | Start a Minikube cluster. |
 | `minikube start --driver=docker` | Start a cluster with a specific driver. |
 | `minikube status` | Check the status of the Minikube cluster. |
