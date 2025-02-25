@@ -14,8 +14,13 @@ aws services list
 # To see all configured profiles, run
 aws configure list-profiles
 
+# Show the AWS account ID, user ARN, and IAM role associated with your credentials.
+aws sts get-caller-identity
+
 # manually inspect the credentials stored in the AWS configuration files
 cat ~/.aws/credentials
+cat ~/.aws/config
+
 
 # Get help for any AWS command
 aws help
