@@ -11,6 +11,12 @@ aws configure
 # List all available AWS services
 aws services list
 
+# To see all configured profiles, run
+aws configure list-profiles
+
+# manually inspect the credentials stored in the AWS configuration files
+cat ~/.aws/credentials
+
 # Get help for any AWS command
 aws help
 ```
