@@ -44,6 +44,13 @@ Multiple ways to set up Kubernetes clusters for different environments:
 
 ### 🏠 Local Development
 
+#### [kubectl](Cluster/kubectl-install/) - Kubernetes CLI
+```bash
+# Install kubectl
+chmod +x Cluster/kubectl-install/install_kubectl.sh
+./Cluster/kubectl-install/install_kubectl.sh
+```
+
 #### [Kind](Cluster/kind-cluster/) - Kubernetes in Docker
 ```bash
 # Install Kind

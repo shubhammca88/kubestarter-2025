@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-app-service
+  name: nginx-service
   labels:
-    app: my-app
+    app: nginx-pod
 spec:
   selector:
-    app: my-app
+    app: nginx-pod
   ports:
     - protocol: TCP
       port: 80

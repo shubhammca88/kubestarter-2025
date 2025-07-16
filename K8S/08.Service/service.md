@@ -11,7 +11,7 @@ Service is an abstraction that allows you to expose a set of Pods (your applicat
 
 ## Basic structure of a Service YAML file
 ```yml
-apiVersion: v1
+apiVersion: v1`
 kind: Service
 metadata:
   name: my-service 
@@ -25,17 +25,7 @@ spec:
   type: LoadBalancer # Or ClusterIP, NodePort
 ```
 
-## Creating a Service
-
-To create a Service, you can use the following command:
-
-```bash
-kubectl expose deployment <deployment-name> --type=<service-type> --name=<service-name>
-```
-
-Replace `<deployment-name>`, `<service-type>`, and `<service-name>` with your specific values.
-
-or 
+## Exposing Service via Port Forward
 
 ```bash
 kubectl port-forward svc/nginx-service 8080:80 -n nginx

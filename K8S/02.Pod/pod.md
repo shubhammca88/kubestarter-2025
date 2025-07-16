@@ -1,6 +1,6 @@
 # `Kubernetes Pods`
 
-Pods are the fundamental building blocks of applications in Kubernetes. They are the smallest deployable units and can contain one or more containers that share resources.
+Pods are the smallest deployable units and can contain one or more containers that share resources.
 
 ## Why Use Pods?
 
@@ -13,7 +13,9 @@ Pods are the fundamental building blocks of applications in Kubernetes. They are
 | Command | Description |
 |---|---|
 | `kubectl get pods` | List all Pods in your cluster |
+| `kubectl get pods -n <namespace>` | List all Pods in your cluster |
 | `kubectl describe pod <pod-name>` | Get detailed information about a Pod |
+| `kubectl describe pod <pod-name> -n <namespace>` | Get detailed information about a Pod |
 | `kubectl logs <pod-name>` | View the logs from a Pod |
 | `kubectl exec -it <pod-name> -- bash` |  Open a shell inside a Pod |
 | `kubectl delete pod <pod-name>` | Delete a Pod |

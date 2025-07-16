@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "kubernetes://schema/v1%40service": "file:///home/shubham/Documents/kubestarter-2025/workloads-file-yml/nginx.yml"
+    }
+}
