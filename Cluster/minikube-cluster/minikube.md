@@ -1,5 +1,4 @@
 # Minikube
-
 Single-node Kubernetes cluster for local development.
 
 ## Installation
